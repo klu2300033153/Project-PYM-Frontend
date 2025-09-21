@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:8080"; // Base URL
+const API_BASE_URL = "http://localhost:8086"; // Base URL
 
 const API_ROUTES = {
   LOGIN: `${API_BASE_URL}/auth/login`,
