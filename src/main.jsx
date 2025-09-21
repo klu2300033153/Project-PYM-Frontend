@@ -6,7 +6,7 @@ import App from './App.jsx';
 import './index.css';
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter  basename="/pym">
     <App />
     {/* <p>Hi, This is PYM</p> */}
   </BrowserRouter>
