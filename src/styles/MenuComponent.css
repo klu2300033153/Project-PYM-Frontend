@@ -1,0 +1,52 @@
+/* Menu Heading */
+.dashboard-menu h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Menu List Styling */
+.dashboard-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Individual Links */
+.dashboard-menu ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #bbbbbb;
+  position: relative;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* Hover and Active Effects */
+.dashboard-menu ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #e5ff00;
+  transition: width 0.4s ease;
+}
+
+.dashboard-menu ul li a:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.07);
+  transform: translateX(5px);
+}
+
+.dashboard-menu ul li a:hover::before {
+  width: 100%;
+}

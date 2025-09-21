@@ -1,0 +1,8 @@
+.footer{
+    font-family: cursive;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(230, 182, 173, 0.146);
+    bottom: 0px;
+}

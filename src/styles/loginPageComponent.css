@@ -1,0 +1,146 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Main container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    gap: 50px;
+}
+
+/* Left Section - Login Box */
+.login-box {
+    width: 400px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* Sign In Title */
+.signin-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #87ceeb, #1e90ff);
+    box-shadow: 0 0 10px #1e90ff;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Labels */
+label {
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+}
+
+/* Input Fields */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.input-field:focus {
+    border-color: #87ceeb;
+    box-shadow: 0px 0px 10px #87ceeb;
+}
+
+/* Placeholder Text */
+.input-field::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Forgot Password */
+.forgot-password {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: left;
+}
+
+/* Login Button */
+.login-btn {
+    padding: 10px 25px;
+    background: linear-gradient(to right, #d2691e, #ff69b4);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.login-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #ff69b4, #d2691e);
+    box-shadow: 0 0 15px #ff69b4;
+}
+
+/* Right Section - Logo */
+.logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Circular Logo */
+.circle-logo {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.circle-logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .login-box {
+        width: 90%;
+    }
+
+    .circle-logo {
+        width: 180px;
+        height: 180px;
+    }
+}

@@ -1,0 +1,85 @@
+/* const DashboardComponent = () => {
+  return (
+    <div className="dashboard-container">
+      <Header isLoggedIn={true}/>
+      <div className="dashboard-menu">
+        <MenuComponent />
+      </div>
+
+      <div className="dashboard-main-content">
+        <h2>Welcome to your Dashboard</h2>
+        
+        <GeneralPlaylistComponent />
+        <UserPlaylistComponent />
+        <HistoryComponent />
+        <RecommendationComponent />
+        <LikedComponent />
+      </div>
+
+      <div className="dashboard-footer">
+        <FooterComponent />
+      </div>
+    </div>
+  );
+}; */
+
+
+
+
+/* Dashboard Container */
+.dashboard-container {
+  display: flex;
+  height: 85vh;
+}
+
+/* Left Menu Component */
+.dashboard-menu {
+  /* width: 20%; */
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Main Content Area */
+.dashboard-main-content {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Welcome Header */
+.dashboard-main-content h2 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Top Section */
+#dashboard-main-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Top Section children take equal width */
+#dashboard-main-top > div {
+  flex: 1;
+}
+
+/* Bottom Section */
+#dashboard-main-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Bottom Section children take equal width */
+#dashboard-main-bottom > div {
+  flex: 1;
+}

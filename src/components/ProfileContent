@@ -1,0 +1,15 @@
+import './ProfileContent.css'; // Optional: Add styles for the component
+
+function ProfileContent() {
+
+    return (
+        <div className="profile-content">
+            <h1>Profile Content</h1>
+            <p>This is the profile content area.</p>
+            {/* Add more content here */}
+        </div>
+    );
+
+}
+
+export default ProfileContent;

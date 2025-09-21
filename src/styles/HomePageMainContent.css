@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Quicksand:wght@400;600&family=Playfair+Display:wght@400;600&family=Poppins:wght@400;600&display=swap');
+
+
+/* Main container */
+.homepage-main {
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+/* Banner section */
+.banner {
+    width: 100vw;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: visible; /* Allow shadow to be visible */
+}
+
+/* Main banner image */
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2; /* Keep the main image above */
+}
+
+/* Blurred shadow effect */
+.banner-shadow {
+    position: absolute;
+    top: 100%; /* Place the shadow right below the main image */
+    left: 0;
+    width: 100%;
+    height: 60px; /* Shadow height */
+    background-image: url("./../assets/home_banner.png"); /* Same image */
+    background-size: cover;
+    background-position: center;
+    
+    /* Blur & Fade Effect */
+    filter: blur(20px) brightness(0.6);
+    opacity: 0.7;
+    
+    /* Animation */
+    animation: movingShadow 2s infinite ease-in-out;
+}
+
+/* Floating shadow animation */
+@keyframes movingShadow {
+    0%, 100% {
+        top: 98%;
+        opacity: 0.4;
+        filter: blur(10px);
+    }
+    50% {
+        top: 96%; /* Move slightly down */
+        opacity: 0.6;
+        filter: blur(5px);
+    }
+}
+
+
+
+
+/* Main Content Section */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 30px;
+    gap: 40px; /* Spacing between text and logo */
+}
+
+/* Text Content */
+.text-content {
+    flex: 1;
+    font-family: "Sacramento", "Great Vibes", cursive;
+    font-size: 2.1rem; /* Slightly bigger */
+    font-weight: 500; /* Medium weight */
+    color: #b172e9; /* Deep purple for richness */
+    line-height: 1.7; /* More spacing for a luxurious feel */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25); /* Softer glow */
+    letter-spacing: 0.2px;
+}
+
+/* Logo Section */
+.logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 0.4; /* Logo section takes 40% width */
+    transform: translateY(15px); /* Moves logo slightly down for wave effect */
+}
+
+.project-logo-container{
+    transform: translateY(+50%) translateX(+20%);
+}
+
+/* Logo Image */
+.project-logo {
+    border: 5px solid purple;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%; /* Circular logo */
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    zoom: 1.1;
+
+    /* Dynamic pulse and rotation animation */
+    /* animation: dynamicPulseRotate 7s infinite ease-in-out; */
+}
+
+/* Keyframes with stronger negative rotation */
+@keyframes dynamicPulseRotate {
+    0% { transform: scale(1) rotate(0deg); }
+    8% { transform: scale(1.15) rotate(-10deg); }   /* Strong left tilt */
+    18% { transform: scale(1) rotate(6deg); }       /* Reset slight right */
+    30% { transform: scale(1.1) rotate(-10deg); }   /* Deep left tilt */
+    38% { transform: scale(1) rotate(8deg); }      /* Reset */
+    50% { transform: scale(1.12) rotate(-18deg); }  /* Strongest left tilt */
+    58% { transform: scale(1.07) rotate(12deg); }   /* Slight hold */
+    68% { transform: scale(1.15) rotate(-12deg); }  /* Quick pulse */
+    75% { transform: scale(1.02) rotate(9deg); }    /* Soft drop */
+    85% { transform: scale(1.14) rotate(-10deg); }  /* Another peak */
+    92% { transform: scale(1.1) rotate(5deg); }     /* Quick drop */
+    100% { transform: scale(1) rotate(0deg); }      /* Back to normal */
+}
+
+
+/* Gradient Text */
+.gradient-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 10px;
+    background: linear-gradient(to right, #c091dd, wheat);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: cursive, "Poppins", sans-serif;
+    line-height: 1.4;
+    text-align: left;
+}
+
+/* Indent second line for wave effect */
+.gradient-text span {
+    display: block;
+    padding-left: 50px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .text-content {
+        width: 100%;
+    }
+
+    .logo-section {
+        width: 100%;
+    }
+}
